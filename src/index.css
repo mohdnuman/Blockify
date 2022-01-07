@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 
-$primary: #11998e;
-$secondary: #38ef7d;
-$white: #fff;
-$gray: #9b9b9b;
 
 body {
   margin: 0;
@@ -25,7 +21,8 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
- }
+  width: 100vw;
+}
 p{
   margin: 0px;
 }
@@ -36,5 +33,6 @@ p{
   position: relative;
   top: 30vh;
   left: 22vw;
+  width: 60vw;
 } 
 

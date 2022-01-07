@@ -8,16 +8,7 @@ class MiddleBanner extends Component {
         <p className="animate__animated animate__fadeInDown">
           Verify Your Product.
         </p>
-        <div class="form__group field">
-          <input
-            type="input"
-            class="form__field"
-            placeholder="Product Id"
-            name="id"
-            id="name"
-            required
-          />
-        </div>
+       
         <button>Verify</button>
       </div>
     );
