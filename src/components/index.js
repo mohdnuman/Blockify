@@ -1,5 +1,7 @@
 import MiddleBanner from "./MiddleBanner";
+import Navbar from "./Navbar";
 
 export{
-    MiddleBanner
+    MiddleBanner,
+    Navbar
 }

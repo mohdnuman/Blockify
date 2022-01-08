@@ -31,8 +31,52 @@ p{
   font-family: 'Alfa Slab One', cursive;
   font-size: 5rem;
   position: relative;
-  top: 30vh;
+  top: 20vh;
   left: 22vw;
   width: 60vw;
 } 
+
+#product-text{
+  color: blue;
+
+}
+
+#logo{
+  margin-top: 2vh;
+  height: 10vh;
+  width:auto;
+}
+
+#id-input{
+  width: 40vw;
+  height: 4vh;
+  border: none;
+  border-color: transparent;
+  border-bottom:2px solid black ;
+  background: transparent;
+  
+}
+
+::placeholder { 
+  color: black;
+  opacity: 0.4; 
+  font-size: 1.5rem;
+}
+
+#verify-button{
+  text-decoration: none;
+  height: 5vh;
+  width: 10vw;
+  font-family: 'Alfa Slab One', cursive;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 2vw;
+  
+}
+
+#verify-button:hover{
+  cursor: pointer;
+}
+
+
 
