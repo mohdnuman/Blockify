@@ -1,6 +1,6 @@
-const Company = artifacts.require("./Company");
+const Blockify = artifacts.require("./Blockify");
 
 module.exports = function(deployer) {
-    deployer.deploy(Company);
+    deployer.deploy(Blockify);
   };
   

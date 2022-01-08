@@ -3,13 +3,15 @@ pragma solidity 0.8.9;
 
 import "./Product.sol";
 
-contract company{
+contract Company{
 
   mapping(string=>address) public products;
   address public owner;
+  string public name;
 
-  constructor() {
-    owner=msg.sender;
+  constructor(address _owner, string memory _name) {
+    owner=_owner;
+    name=_name;
   }
 
   modifier auth{
