@@ -17,7 +17,6 @@ code {
 }
  #body-background{
   background:  url("./background.png")no-repeat center center;
-  /* background-image: url('../public/background.png'); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
