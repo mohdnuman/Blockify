@@ -3,6 +3,17 @@ import "animate.css";
 
 
 class MiddleBanner extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      id:''
+    }
+  }
+
+  handleSubmit=async ()=>{
+    
+
+  }
   render() {
     return (
       <div id="middle-banner">
@@ -11,7 +22,7 @@ class MiddleBanner extends Component {
         </p>
         <input id="id-input" placeholder="Enter product ID"/>
 
-        <button id="verify-button">Verify</button>
+        <button id="verify-button" onClick={this.handleSubmit}>Verify</button>
 
         
       </div>

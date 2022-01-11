@@ -9,9 +9,11 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-linear-gradient-button": "^1.1.1",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^4.0.3",
+    "react-web3-provider": "^1.1.2",
+    "truffle-hdwallet-provider": "^1.0.17",
     "web-vitals": "^2.1.2",
-    "web3": "^1.6.1"
+    "web3": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
