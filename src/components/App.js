@@ -1,16 +1,21 @@
-import { MiddleBanner, Navbar } from ".";
-
+import { MiddleBanner, Navbar, Product,Home} from ".";
+import { BrowserRouter as Router,Route,Switch  } from 'react-router-dom';
 import React from "react";
 
 function App() {
   return (
-    <div className="App" >
-      <div id="body-background">
-        <Navbar />
-        <MiddleBanner/>
+    <Router>
+      <div className="App">
+        <div id="body-background">
+         
+          <Switch>
+            <Route path='/' component={Home}/>
 
+            <Route path="/product/:productId" component={Product} />
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

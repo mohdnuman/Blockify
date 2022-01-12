@@ -80,4 +80,46 @@ p{
 }
 
 
+#verification-green{
+  margin:0px;
+  color: #61f200;
+  display: inline-block;
+}
+
+#tick-image{
+  height: auto;
+  width: 5vw;
+  display: inline-block;
+  top:15px;
+  position: relative;
+}
+
+#verification-red{
+  margin:0px;
+  color: #ff5440;
+  display: inline-block;
+}
+
+#cross-image{
+  height: auto;
+  width: 4vw;
+  display: inline-block;
+  top:15px;
+  position: relative;
+}
+
+
+
+#detail-button{
+  margin:0px;
+  text-decoration: none;
+  height: 5vh;
+  width: 10vw;
+  font-family: 'Alfa Slab One', cursive;
+  background-color: white;
+  border-radius: 10px;
+  display: inline-block;
+  
+}
+
 
