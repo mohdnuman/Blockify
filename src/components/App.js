@@ -1,4 +1,4 @@
-import { MiddleBanner, Navbar, Product,Home} from ".";
+import { ProductShow,Home} from ".";
 import { BrowserRouter as Router,Route,Switch  } from 'react-router-dom';
 import React from "react";
 
@@ -9,9 +9,9 @@ function App() {
         <div id="body-background">
          
           <Switch>
-            <Route path='/' component={Home}/>
+            <Route exact path='/' component={Home}/>
 
-            <Route path="/product/:productId" component={Product} />
+            <Route path="/product/:address" component={ProductShow} />
           </Switch>
         </div>
       </div>
