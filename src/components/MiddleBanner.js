@@ -50,8 +50,8 @@ class MiddleBanner extends Component {
 
         <button id="verify-button" onClick={this.handleSubmit}>Verify</button>
 
-        {this.state.recieved &&<div> <h6 id="verification-green">Verified</h6> <img alt="verified" src="https://cdn-icons-png.flaticon.com/512/390/390973.png" id="tick-image"/></div>}
-        {this.state.recieved===false && <div><h6 id="verification-red">Not Verified</h6> {'  '} <img alt="not verified" src="https://cdn-icons-png.flaticon.com/512/594/594598.png" id="cross-image"/></div>}
+        {this.state.recieved &&<div> <h6 className="verification-green">Verified</h6> <img alt="verified" src="https://cdn-icons-png.flaticon.com/512/390/390973.png" className="tick-image"/></div>}
+        {this.state.recieved===false && <div><h6 className="verification-red">Not Verified</h6> {'  '} <img alt="not verified" src="https://cdn-icons-png.flaticon.com/512/594/594598.png" className="cross-image"/></div>}
 
         {this.state.recieved && <Link to={`/product/${this.state.address}`}><button id="detail-button">View details</button></Link>}
 

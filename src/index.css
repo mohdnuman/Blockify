@@ -86,7 +86,7 @@ p{
   display: inline-block;
 }
 
-#tick-image{
+.tick-image{
   height: auto;
   width: 5vw;
   display: inline-block;
@@ -94,13 +94,13 @@ p{
   position: relative;
 }
 
-#verification-red{
+.verification-red{
   margin:0px;
   color: #ff5440;
   display: inline-block;
 }
 
-#cross-image{
+.cross-image{
   height: auto;
   width: 4vw;
   display: inline-block;
@@ -122,4 +122,87 @@ p{
   
 }
 
+.product-image{
+  height: auto;
+  width: 20vw;
+  margin: 40px;
+  padding: 10px;
+    border: 1px solid greenyellow;
+    box-shadow:  -1px 1px greenyellow,
+         -2px 2px greenyellow,
+         -3px 3px greenyellow,
+         -4px 4px greenyellow,
+         -5px 5px greenyellow;
+  /* display: inline-block; */
+}
+#image-block{
+  display: inline-block;
+
+}
+
+.product-name{
+  display: inline-block;
+  position: relative;
+  top: -30vh;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 5vh;
+  left: -22vw;
+}
+
+.owner-address{
+  display: inline-block;
+  position: relative;
+  top: -25vh;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 3vh;
+  left: 27vw;
+
+}
+
+.verification-green-product{
+  margin:0px;
+  color: #61f200;
+  display: inline-block;
+  font-size: 4vw;
+  display: inline-block;
+  position: relative;
+  top: -40vh;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.tick-image-product{
+  height: auto;
+  width: 5vw;
+  display: inline-block;
+  top:-39vh;
+  position: relative;
+  
+}
+
+#transfer-button{
+  margin:0px;
+  text-decoration: none;
+  height: 5vh;
+  width: 15vw;
+  font-family: 'Alfa Slab One', cursive;
+  background-color: white;
+  border-radius: 10px;
+  display: inline-block;
+  position: relative;
+
+}
+#transfer-button:hover{
+  cursor: pointer;
+}
+
+#recipient-address{
+  width: 40vw;
+  height: 4vh;
+  border: none;
+  border-color: transparent;
+  border-bottom:2px solid black ;
+  background: transparent;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 10px;
+}
 
