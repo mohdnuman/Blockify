@@ -187,10 +187,10 @@ p{
   font-family: 'Alfa Slab One', cursive;
   background-color: white;
   border-radius: 10px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   top: -7vh;
-  left: 45vw;
+  left: 47vw;
 
 }
 #transfer-button:hover{
@@ -207,7 +207,8 @@ p{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   margin: 10px;
   position: relative;
-  left: -47vw;
-  display: inline-block;
+
+  left: -45vw;
+  
 }
 
