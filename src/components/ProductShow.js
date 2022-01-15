@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Product from "../product";
-// import web3 from "../web3";
+import web3 from "../web3";
 
 class ProductShow extends Component {
   constructor(props) {
@@ -8,12 +8,13 @@ class ProductShow extends Component {
     this.state = {
       name: "Loading....",
       owner: "Loading....",
+      recipient:''
     };
   }
 
   async componentDidMount() {
     const address = this.props.match.params.address;
-    console.log(address);
+    // console.log(address);
     const product = Product(address);
 
     const name = await product.methods.name().call();
@@ -25,7 +26,23 @@ class ProductShow extends Component {
     });
   }
 
-  handleTransfer = () => {};
+  handleTransfer = async() => {
+    const address = this.props.match.params.address;
+    // console.log(address);
+    const product = Product(address);
+    const accounts= await web3.eth.getAccounts();
+    console.log(accounts);
+
+    await product.methods.transfer(this.state.recipient).send({from:accounts[0]});
+
+
+
+  }
+  handleChange=(e)=>{
+    this.setState({
+      recipient:e.target.value
+    })
+  }
 
   render() {
     return (
@@ -49,12 +66,11 @@ class ProductShow extends Component {
         <span className="product-name">{this.state.name}</span>
         <span className="owner-address">Owned By-{this.state.owner}</span>
 
-        <form>
-            <input name="recipient" type="text" id="recipient-address" placeholder="Enter Recipient's Address"/>
-          <button id="transfer-button" onClick={this.handleTransfer} type="submit">
+        
+            <input name="recipient" type="text" id="recipient-address" placeholder="Enter Recipient's Address" onChange={this.handleChange}/>
+          <button id="transfer-button" onClick={this.handleTransfer} >
             Transfer OwnerShip
           </button>
-        </form>
       </div>
     );
   }
