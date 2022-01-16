@@ -10,7 +10,8 @@ class MiddleBanner extends Component {
     this.state={
       id:'',
       address:'',
-      recieved:undefined
+      recieved:undefined,
+      loading:false
     }
   }
 
@@ -22,6 +23,7 @@ class MiddleBanner extends Component {
   }
 
   handleSubmit=async ()=>{
+    this.setState({loading:true});
     const ans=await company.methods.verifyProduct(this.state.id).call();
     
     
@@ -29,18 +31,21 @@ class MiddleBanner extends Component {
       const address=await company.methods.products(this.state.id).call();
       this.setState({
         recieved:true,
-        address:address
+        address:address,
+        loading:false
       })
     }
     else{
       this.setState({
-        recieved:false
+        recieved:false,
+        loading:false
       })
     }
 
     
   }
   render() {
+    const loading=this.state.loading;
     return (
       <div id="middle-banner">
         <p className="animate__animated animate__fadeInDown">
@@ -49,6 +54,8 @@ class MiddleBanner extends Component {
         <input id="id-input" placeholder="Enter product ID" onChange={this.handleChange}/>
 
         <button id="verify-button" onClick={this.handleSubmit}>Verify</button>
+
+        {loading && <h6 id="verifying">Verifying...</h6>}
 
         {this.state.recieved &&<div> <h6 className="verification-green">Verified</h6> <img alt="verified" src="https://cdn-icons-png.flaticon.com/512/390/390973.png" className="tick-image"/></div>}
         {this.state.recieved===false && <div><h6 className="verification-red">Not Verified</h6> {'  '} <img alt="not verified" src="https://cdn-icons-png.flaticon.com/512/594/594598.png" className="cross-image"/></div>}
