@@ -50,7 +50,7 @@ class CreateProduct extends Component {
                 </button>
                 </div>
                 </div>}
-                {id&&<div>Product created with id-{id}</div>}
+                {id&&<div id="created-heading">Product created with id-<span id="uuid">{id}</span></div>}
             </div>
         );
     }

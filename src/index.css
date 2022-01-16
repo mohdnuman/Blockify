@@ -248,3 +248,14 @@ p{
   /* left: 47vw; */
 }
 
+#created-heading{
+  font-size: 4vh;
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  top:30vh;
+  left:16vw;
+}
+
+#uuid{
+  color: blue;
+}
