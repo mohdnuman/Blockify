@@ -9,7 +9,8 @@ class CreateProduct extends Component {
         super(props);
         this.state={
             name:'',
-            id:''
+            id:'',
+            loading:false
         }
     }
 
@@ -20,6 +21,7 @@ class CreateProduct extends Component {
     }
 
     handleCreate=async()=>{
+        this.setState({loading:true});
         let id=await uuidv4();
         console.log(id);
         const accounts= await web3.eth.getAccounts();
@@ -28,18 +30,20 @@ class CreateProduct extends Component {
         await company.methods.createProduct(id,this.state.name).send({from:accounts[0]});
 
         this.setState({
-            id:id
-        })
+            id:id,
+            loading:false
+        });
 
 
     }
     render() {
         const id=this.state.id;
+        const loading=this.state.loading;
         return (
             <div>
                 <Navbar />
                 
-                {!id &&<div>
+                {!id && !loading && <div>
                     <h1 id="create-heading">
                     Create A <span id="product-text">Product</span>
                 </h1>
@@ -50,7 +54,8 @@ class CreateProduct extends Component {
                 </button>
                 </div>
                 </div>}
-                {id&&<div id="created-heading">Product created with id-<span id="uuid">{id}</span></div>}
+                {loading && <h1 id="created-heading">Creating...</h1>}
+                {id&&<div id="created-heading">Product created with id-><span id="uuid">{id}</span></div>}
             </div>
         );
     }
