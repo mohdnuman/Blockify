@@ -212,3 +212,39 @@ p{
   
 }
 
+#create-heading{
+  font-size: 8vh;
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  top: 18vh;
+  left: 32vw;
+}
+
+#name-input{
+  width: 40vw;
+  height: 4vh;
+  border: none;
+  border-color: transparent;
+  border-bottom:2px solid black ;
+  background: transparent;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  top: 17vh;
+  left: 29vw;
+  text-align: center;
+}
+
+#create-button{
+  margin:0px;
+  text-decoration: none;
+  height: 5vh;
+  width: 15vw;
+  font-family: 'Alfa Slab One', cursive;
+  background-color: white;
+  border-radius: 10px;
+  /* display: inline-block; */
+  position: relative;
+  top: 30vh;
+  /* left: 47vw; */
+}
+

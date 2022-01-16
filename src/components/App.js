@@ -1,4 +1,4 @@
-import { ProductShow,Home} from ".";
+import { ProductShow,Home, CreateProduct} from ".";
 import { BrowserRouter as Router,Route,Switch  } from 'react-router-dom';
 import React from "react";
 
@@ -12,6 +12,8 @@ function App() {
             <Route exact path='/' component={Home}/>
 
             <Route path="/product/:address" component={ProductShow} />
+            <Route path="/create" component={CreateProduct} />
+
           </Switch>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Product from "../product";
 import web3 from "../web3";
+import {Navbar} from './index';
 
 class ProductShow extends Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class ProductShow extends Component {
   render() {
     return (
       <div>
+        <Navbar/>
         <div id="image-block">
           <img
             src={`/${this.state.name}.gif`}
